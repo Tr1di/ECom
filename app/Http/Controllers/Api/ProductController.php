@@ -11,12 +11,10 @@ use Validator;
 class ProductController extends Controller
 {
     public function index(Request $request) {
-        Validator::make($request->all(), [
-            'game' => 'required|exists:games,id'
-        ], [
-            'game' => 'Необходимо указать существующую игру' 
-        ])->validate();
-        
+       $request->validate([
+          'game' => 'required|exists:games,id'
+       ]);
+
         $products = Product::query()
             ->where('game_id', $request->game)
             ->with('game')

@@ -15,6 +15,11 @@
             <input name="description" />
         </label>
 
+        <label>
+            Цена: 
+            <input name="price" />
+        </label>
+
         <input type="submit" value="Подтвердить">
     </form>
 

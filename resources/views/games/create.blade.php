@@ -6,7 +6,12 @@
 
         <label>
             Название: 
-            <input name="name" />
+            <input name="title" />
+        </label>
+
+        <label>
+            Описание:
+            <textarea name="description"></textarea>
         </label>
 
         <input type="submit" value="Подтвердить">

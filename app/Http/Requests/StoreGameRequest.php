@@ -23,7 +23,15 @@ class StoreGameRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "title" => ['required', 'string', 'min:3']
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'title.required' => 'Game titile is required',
+            'title.min' => 'Game title must be at least 3 letters long'
         ];
     }
 }

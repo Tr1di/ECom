@@ -4,5 +4,12 @@
     <h1>Hello, World!</h1>
     <p>{{ now() }}</p>
 
-    <a href="{{ route('products.create') }}">Товары</a>
+    <a href="{{ route('games.index') }}">Игры</a>
+
+    @auth
+        <a href="{{ route('profile.index') }}">{{ auth()->user()->email }}</a>
+    @else
+        <a href="/login">Login</a>
+    @endauth
+    
 @endsection

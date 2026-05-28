@@ -5,6 +5,10 @@
         <div style="background-color: green">{{ session('success') }}</div>
     @endif
 
+    @can('create', App\Models\Game::class)
+        <a href="{{ route('games.create') }}">Создать</a>
+    @endcan
+
     <table>
         <thead>
             <tr>
